@@ -51,6 +51,19 @@ a {
   color: #2c2c2c;
 }
 
+/* Style for the buttons */
+button {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
 /* container for the home page */
 .container {
   width: 50%;
@@ -72,6 +85,10 @@ a {
 }
 
 /* Header Section */
+.welcome-header {
+  text-align: center;
+}
+
 .intro-header {
   margin-top: 5px;
 }
@@ -84,17 +101,6 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 40px;
-  /* Style for the buttons */
-}
-
-.sign-btn button {
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.sign-btn button:hover {
-  opacity: 0.7;
 }
 
 .signin-btn {
@@ -105,5 +111,103 @@ a {
 .signout-btn {
   background-color: #5c7780;
   color: white;
+}
+
+/* signin form section */
+.signin-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.form-wrapper {
+  /* Form header */
+}
+
+.form-wrapper header {
+  text-align: center;
+  margin: 5vh 0;
+  padding: 4rem;
+}
+
+.form-wrapper .firstname-form,
+.form-wrapper .lastname-form,
+.form-wrapper .phone-form,
+.form-wrapper .datetime-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+.form-wrapper input {
+  padding: 2rem 3rem;
+}
+
+.btn-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10vh 0;
+}
+
+.btn-form .back-btn {
+  background-color: #5c7780;
+  color: white;
+}
+
+.btn-form .next-btn {
+  background-color: #35a6cc;
+  color: white;
+}
+
+/* Questionnaire section */
+.questionnaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.questionnaire input,
+.questionnaire label {
+  padding: 3rem;
+  text-align: center;
+}
+
+.questionnaire form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.questionnaire button {
+  background-color: #35cca6;
+  color: white;
+  margin-bottom: 10vh;
 }
 /*# sourceMappingURL=style.css.map */

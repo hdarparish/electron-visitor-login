@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Visitor Login</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="">
+        <header>
+          <h1 class="welcome-header">Welcome!</h1>
+          <h3 class="intro-header">
+            Please sign-in and wear your nametag <br />
+            do not forget to sign out.
+          </h3>
+        </header>
+        <div class="sign-btn">
+          <button
+            type="button"
+            class="signin-btn"
+            onclick="location.replace('./signin.html')"
+          >
+            Sign in
+          </button>
+          <button
+            type="button"
+            class="signout-btn"
+            onclick="location.replace('./signout.html')"
+          >
+            Sign out
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

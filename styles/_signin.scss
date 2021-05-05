@@ -1,0 +1,66 @@
+/* signin form section */
+.signin-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form-wrapper {
+  /* Form header */
+  header {
+    text-align: center;
+    margin: 5vh 0;
+    padding: 4rem;
+  }
+  .firstname-form,
+  .lastname-form,
+  .phone-form,
+  .datetime-form {
+    padding: 3rem;
+    text-align: center;
+  }
+  label {
+    margin: 0rem 3rem;
+  }
+  input {
+    padding: 2rem 3rem;
+  }
+}
+
+.btn-form {
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh 0;
+
+  .back-btn {
+    background-color: #5c7780;
+    color: white;
+  }
+  .next-btn {
+    background-color: #35a6cc;
+    color: white;
+  }
+}
+
+/* Questionnaire section */
+.questionnaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  input,
+  label {
+    padding: 3rem;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  button {
+    background-color: #35cca6;
+    color: white;
+    margin-bottom: 10vh;
+  }
+}

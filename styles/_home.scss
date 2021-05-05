@@ -25,11 +25,21 @@
 }
 
 .signin-btn {
-  background-color: #35a6cc;
+  background-color: #2088aa;
   color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: #91e0fa;
+    color: rgb(55, 62, 68);
+  }
 }
 
 .signout-btn {
   background-color: #5c7780;
   color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: #bed7df;
+    color: rgb(55, 62, 68);
+  }
 }

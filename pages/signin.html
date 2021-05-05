@@ -22,6 +22,8 @@
 
   <body>
     <main class="">
+      <!-- Personal info section -->
+
       <section class="signin-form">
         <div class="form-wrapper">
           <header>
@@ -51,46 +53,101 @@
             <div class="btn-form">
               <button
                 class="back-btn"
-                onclick="location.replace('./signin.html')"
+                onclick="location.replace('./index.html')"
               >
                 Back
               </button>
-              <button class="next-btn">Next</button>
+              <button class="next-btn" onclick="showNext(event)">Next</button>
             </div>
           </form>
         </div>
       </section>
-      <section class="slideshow">
+
+      <!-- Company rules section -->
+
+      <section id="slideshow">
         <iframe
-          src="../vaccine.pdf"
+          src=""
           frameborder="0"
           width="100%"
           height="1000px"
           style="border: 1px solid black"
         ></iframe>
       </section>
+
+      <!-- questionnaire section (COVID questions) -->
       <section class="questionnaire">
         <div class="form-wrapper">
-          <header><h3>Covid questionnaire</h3></header>
-          <form action="">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-            <label for="vehicle1"> I have a bike</label>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-            <label for="vehicle2"> I have a car</label>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-            <label for="vehicle3"> I have a boat</label>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-            <label for="vehicle1"> I have a bike</label>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
-            <label for="vehicle2"> I have a car</label>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-            <label for="vehicle3"> I have a boat</label>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
-            <label for="vehicle3"> I have a boat</label>
-            <button class="submit-btn">Submit</button>
+          <header>
+            <h3>Are you currently experiencing any of these symptoms?</h3>
+          </header>
+
+          <form>
+            <div class="questions">
+              <div>
+                <input type="checkbox" id="question1" name="question1" />
+                <label for="question1">Fever and/or chills</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question2" name="question2" />
+                <label for="question2">Cough or barking cough</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question3" name="question3" />
+                <label for="question3">Shortness of breath</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question4" name="question4" />
+                <label for="question4">Sore throat</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question5" name="question5" />
+                <label for="question5">Difficulty swallowing</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question6" name="question6" />
+                <label for="question6">Runny or stuffy/congested nose</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question7" name="question7" />
+                <label for="question7"
+                  >Decrease or loss of taste or smell</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="question8" name="question8" />
+                <label for="question8">Pink eye</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question9" name="question9" />
+                <label for="question9">Headache</label>
+              </div>
+              <div>
+                <input type="checkbox" id="question10" name="question10" />
+                <label for="question10"
+                  >Digestive issues like nausea/vomiting, diarrhea, stomach
+                  pain</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="question11" name="question11" />
+                <label for="question11">Muscle aches/extreme tiredness</label>
+              </div>
+            </div>
+
+            <div class="submit-btn">
+              <button>Submit</button>
+            </div>
           </form>
         </div>
       </section>
     </main>
+    <script>
+      //go to the location of the slideshow ID, similar to href
+      const showNext = (e) => {
+        e.preventDefault();
+        location.hash = "#slideshow";
+      };
+    </script>
   </body>
 </html>

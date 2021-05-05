@@ -5,25 +5,37 @@
   align-items: center;
   height: 100%;
 }
+
+header {
+  text-align: center;
+  margin: 5vh 0;
+  padding: 4rem;
+}
+
+label {
+  margin: 0rem 3rem;
+}
+input {
+  padding: 2rem 3rem;
+}
+
 .form-wrapper {
-  /* Form header */
-  header {
-    text-align: center;
-    margin: 5vh 0;
-    padding: 4rem;
-  }
+  justify-content: center;
+
   .firstname-form,
   .lastname-form,
   .phone-form,
   .datetime-form {
     padding: 3rem;
-    text-align: center;
-  }
-  label {
-    margin: 0rem 3rem;
-  }
-  input {
-    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    label,
+    input {
+      flex: 1;
+    }
+    input[type="datetime-local"] {
+      flex: 2;
+    }
   }
 }
 
@@ -35,10 +47,20 @@
   .back-btn {
     background-color: #5c7780;
     color: white;
+    &:hover {
+      cursor: pointer;
+      background-color: #bed7df;
+      color: rgb(55, 62, 68);
+    }
   }
   .next-btn {
-    background-color: #35a6cc;
+    background-color: #2088aa;
     color: white;
+    &:hover {
+      cursor: pointer;
+      background-color: #91e0fa;
+      color: rgb(55, 62, 68);
+    }
   }
 }
 
@@ -48,19 +70,26 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  input,
-  label {
-    padding: 3rem;
-    text-align: center;
+  .form-wrapper {
+    div {
+      padding: 3rem;
+      text-align: center;
+    }
   }
-  form {
+  .questions {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: start;
   }
+
   button {
-    background-color: #35cca6;
+    background-color: #34927b;
     color: white;
-    margin-bottom: 10vh;
+    margin-bottom: 3vh;
+    &:hover {
+      cursor: pointer;
+      background-color: #79e7cc;
+      color: rgb(55, 62, 68);
+    }
   }
 }

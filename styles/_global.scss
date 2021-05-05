@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -50,7 +51,4 @@ button {
   border-radius: 5px;
   text-align: center;
   transition-duration: 0.3s;
-  &:hover {
-    opacity: 0.7;
-  }
 }

@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,10 +61,6 @@ button {
           transition-duration: 0.3s;
 }
 
-button:hover {
-  opacity: 0.7;
-}
-
 /* container for the home page */
 .container {
   width: 50%;
@@ -104,13 +101,25 @@ button:hover {
 }
 
 .signin-btn {
-  background-color: #35a6cc;
+  background-color: #2088aa;
   color: white;
+}
+
+.signin-btn:hover {
+  cursor: pointer;
+  background-color: #91e0fa;
+  color: #373e44;
 }
 
 .signout-btn {
   background-color: #5c7780;
   color: white;
+}
+
+.signout-btn:hover {
+  cursor: pointer;
+  background-color: #bed7df;
+  color: #373e44;
 }
 
 /* signin form section */
@@ -127,14 +136,24 @@ button:hover {
   height: 100%;
 }
 
-.form-wrapper {
-  /* Form header */
-}
-
-.form-wrapper header {
+header {
   text-align: center;
   margin: 5vh 0;
   padding: 4rem;
+}
+
+label {
+  margin: 0rem 3rem;
+}
+
+input {
+  padding: 2rem 3rem;
+}
+
+.form-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-wrapper .firstname-form,
@@ -142,15 +161,34 @@ button:hover {
 .form-wrapper .phone-form,
 .form-wrapper .datetime-form {
   padding: 3rem;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.form-wrapper label {
-  margin: 0rem 3rem;
+.form-wrapper .firstname-form label,
+.form-wrapper .firstname-form input,
+.form-wrapper .lastname-form label,
+.form-wrapper .lastname-form input,
+.form-wrapper .phone-form label,
+.form-wrapper .phone-form input,
+.form-wrapper .datetime-form label,
+.form-wrapper .datetime-form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.form-wrapper input {
-  padding: 2rem 3rem;
+.form-wrapper .firstname-form input[type="datetime-local"],
+.form-wrapper .lastname-form input[type="datetime-local"],
+.form-wrapper .phone-form input[type="datetime-local"],
+.form-wrapper .datetime-form input[type="datetime-local"] {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .btn-form {
@@ -167,9 +205,21 @@ button:hover {
   color: white;
 }
 
+.btn-form .back-btn:hover {
+  cursor: pointer;
+  background-color: #bed7df;
+  color: #373e44;
+}
+
 .btn-form .next-btn {
-  background-color: #35a6cc;
+  background-color: #2088aa;
   color: white;
+}
+
+.btn-form .next-btn:hover {
+  cursor: pointer;
+  background-color: #91e0fa;
+  color: #373e44;
 }
 
 /* Questionnaire section */
@@ -186,13 +236,12 @@ button:hover {
   height: 100%;
 }
 
-.questionnaire input,
-.questionnaire label {
+.questionnaire .form-wrapper div {
   padding: 3rem;
   text-align: center;
 }
 
-.questionnaire form {
+.questionnaire .questions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,14 +249,20 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .questionnaire button {
-  background-color: #35cca6;
+  background-color: #34927b;
   color: white;
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
+}
+
+.questionnaire button:hover {
+  cursor: pointer;
+  background-color: #79e7cc;
+  color: #373e44;
 }
 /*# sourceMappingURL=style.css.map */

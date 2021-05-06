@@ -1,20 +1,21 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
+const { ipcMain } = require("electron/main");
+const db = require("./db/db");
 const path = require("path");
 
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    minWidth: 1000,
+    minHeight: 700,
     webPreferences: { nodeIntegration: true, contextIsolation: false },
   });
 
-  // and load the index.html of the app.
-  mainWindow.loadFile("./pages/index.html");
+  mainWindow.loadFile("./src/pages/index.html");
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
@@ -39,3 +40,13 @@ app.on("window-all-closed", function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+//send the login data to db
+ipcMain.on("user-signin", async (e, data) => {
+  await db.addLogin(data);
+});
+
+ipcMain.on("get-logins", async (e) => {
+  let result = await db.getLogins();
+  e.sender.send("all-logins-success", result.recordset);
+});

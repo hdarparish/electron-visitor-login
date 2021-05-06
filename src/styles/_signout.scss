@@ -1,3 +1,4 @@
+/* Table section */
 table,
 th,
 td {
@@ -35,8 +36,17 @@ table {
       border-right: none;
     }
   }
+  button {
+    background: #34927b;
+    &:hover {
+      cursor: pointer;
+      background-color: #79e7cc;
+      color: rgb(55, 62, 68);
+    }
+  }
 }
 
+/* return button section */
 .return-btn {
   width: 50%;
   display: flex;

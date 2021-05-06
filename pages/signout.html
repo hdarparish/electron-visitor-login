@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Visitor Login</title>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <header><h3>Please sign out below</h3></header>
+        <table class="" id="">
+          <thead>
+            <tr>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">Sign-in</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tData"></tbody>
+        </table>
+      </section>
+      <div class="return-btn">
+        <button onclick="location.replace('./index.html')">Back</button>
+      </div>
+    </main>
+  </body>
+</html>

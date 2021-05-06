@@ -2,7 +2,7 @@
   "name": "electron-visitor-login",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron main.js",
     "dev": "nodemon --exec electron .",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/hdarparish/electron-visitor-login#readme",
   "dependencies": {
+    "dotenv": "^9.0.0",
+    "mssql": "^6.3.1",
     "sass": "^1.32.12"
   },
   "devDependencies": {

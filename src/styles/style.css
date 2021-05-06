@@ -266,6 +266,7 @@ input {
   color: #373e44;
 }
 
+/* Table section */
 table,
 th,
 td {
@@ -307,6 +308,17 @@ table th.last {
   border-right: none;
 }
 
+table button {
+  background: #34927b;
+}
+
+table button:hover {
+  cursor: pointer;
+  background-color: #79e7cc;
+  color: #373e44;
+}
+
+/* return button section */
 .return-btn {
   width: 50%;
   display: -webkit-box;

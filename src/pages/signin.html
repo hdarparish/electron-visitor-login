@@ -32,22 +32,27 @@
           <form>
             <div class="firstname-form">
               <label for="first-name">First name</label>
-              <input type="text" name="first-name" required />
+              <input type="text" name="first-name" id="first-name" required />
             </div>
 
             <div class="lastname-form">
               <label for="last-name">Last name</label>
-              <input type="text" name="last-name" required />
+              <input type="text" name="last-name" id="last-name" required />
             </div>
 
             <div class="phone-form">
               <label for="phone-number">Phone #</label>
-              <input type="text" name="phone-number" required />
+              <input
+                type="text"
+                name="phone-number"
+                id="phone-number"
+                required
+              />
             </div>
 
             <div class="datetime-form">
               <label for="date-time">Date & time</label>
-              <input type="datetime-local" name="date-time" />
+              <input type="datetime-local" name="date-time" id="date-time" />
             </div>
 
             <div class="btn-form">
@@ -136,18 +141,12 @@
             </div>
 
             <div class="submit-btn">
-              <button>Submit</button>
+              <button onclick="sendSignin(event)">Submit</button>
             </div>
           </form>
         </div>
       </section>
     </main>
-    <script>
-      //go to the location of the slideshow ID, similar to href
-      const showNext = (e) => {
-        e.preventDefault();
-        location.hash = "#slideshow";
-      };
-    </script>
+    <script src="../signin.js"></script>
   </body>
 </html>

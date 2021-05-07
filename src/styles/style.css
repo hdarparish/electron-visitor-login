@@ -223,7 +223,7 @@ input {
 }
 
 /* Questionnaire section */
-.questionnaire {
+#questionnaire {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,12 +236,12 @@ input {
   height: 100%;
 }
 
-.questionnaire .form-wrapper div {
+#questionnaire .form-wrapper div {
   padding: 3rem;
   text-align: center;
 }
 
-.questionnaire .questions {
+#questionnaire .questions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,16 +254,27 @@ input {
           align-items: start;
 }
 
-.questionnaire button {
+#questionnaire .questions div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#questionnaire button {
   background-color: #34927b;
   color: white;
   margin-bottom: 3vh;
 }
 
-.questionnaire button:hover {
+#questionnaire button:hover {
   cursor: pointer;
   background-color: #79e7cc;
   color: #373e44;
+}
+
+#questionnaire input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
 }
 
 /* Table section */
@@ -342,5 +353,9 @@ table button:hover {
   cursor: pointer;
   background-color: #bed7df;
   color: #373e44;
+}
+
+.column-hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

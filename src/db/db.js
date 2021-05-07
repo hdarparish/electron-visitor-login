@@ -57,7 +57,29 @@ const getLogins = async () => {
   }
 };
 
+const visitorLogout = async (logId) => {
+  try {
+    let pool = await sql.connect(config);
+    // let request = await pool.request();d
+    let date = new Date().toLocaleString();
+    let result = await pool
+      .request()
+      .input("input_logid", sql.Int, logId)
+      .input("input_signout", sql.DateTime, date)
+      //convert the date because it has a timestamp
+      .query(
+        "UPDATE dbo.logins SET sign_out = @input_signout WHERE log_id = @input_logid"
+      );
+
+    //close connection
+    pool.close();
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   addLogin,
   getLogins,
+  visitorLogout,
 };

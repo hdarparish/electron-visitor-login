@@ -65,7 +65,7 @@ input {
 }
 
 /* Questionnaire section */
-.questionnaire {
+#questionnaire {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +80,9 @@ input {
     display: flex;
     flex-direction: column;
     align-items: start;
+    div {
+      display: flex;
+    }
   }
 
   button {
@@ -91,5 +94,9 @@ input {
       background-color: #79e7cc;
       color: rgb(55, 62, 68);
     }
+  }
+  input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
   }
 }

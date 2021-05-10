@@ -21,6 +21,7 @@
   "dependencies": {
     "dotenv": "^9.0.0",
     "mssql": "^6.3.1",
+    "nodemailer": "^6.6.0",
     "sass": "^1.32.12"
   },
   "devDependencies": {
